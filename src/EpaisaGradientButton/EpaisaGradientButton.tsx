@@ -12,6 +12,7 @@ interface PropTypes extends TouchableOpacityProps {
   height?: number;
   title?: string;
   width?: string | number;
+  textColor?: string;
 }
 
 const EpaisaPaymentButton = (props: PropTypes) => {
@@ -23,6 +24,7 @@ const EpaisaPaymentButton = (props: PropTypes) => {
     radius,
     fontSize,
     title,
+    textColor,
     ...others
   } = props;
   height = height || 40;
@@ -39,7 +41,7 @@ const EpaisaPaymentButton = (props: PropTypes) => {
       fontSize: fontSize,
       // fontFamily: 'Gill Sans',
       textAlign: 'center',
-      color: '#ffffff',
+      color: textColor || '#ffffff',
       marginVertical: (height - fontSize) / 2,
       backgroundColor: 'transparent',
     },
@@ -48,7 +50,7 @@ const EpaisaPaymentButton = (props: PropTypes) => {
     <LinearGradient
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 0 }}
-      colors={disabled ? ['gray', 'gray'] : colors}
+      colors={disabled ? ['gray', 'gray'] : colors || ['#114B8C', '#0079AA']}
       style={styles.linearGradient}
     >
       <TouchableOpacity

@@ -104,6 +104,7 @@ interface PropTypes extends TouchableOpacityProps {
   disabled?: boolean
   onPress?(): void
   main: boolean
+  selected: boolean
   iconName:
   'MasterCard' |
   'Maestro' |
@@ -133,8 +134,8 @@ interface PropTypes extends TouchableOpacityProps {
   'CardPayments'
 }
 const EpaisaPaymentButton = (props: PropTypes) => {
-  const { disabled, loading, onPress, size, iconName, main, ...others } = props;
-  const name = `${iconName}${disabled || loading ? '_DISABLED' : ''}${main && !(disabled || loading) ? '_MAIN' : ''}`.toString()
+  const { disabled, loading, onPress, size, iconName, main, selected, ...others } = props;
+  const name = `${iconName}${disabled || loading ? '_DISABLED' : ''}${!selected && !(disabled || loading) ? '_MAIN' : ''}`.toString()
   return (
     <TouchableOpacity
       // disabled={(DISABLED && this.props.container) || this.props.loading}
