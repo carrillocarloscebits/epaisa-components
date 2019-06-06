@@ -15,7 +15,9 @@
     "metro-react-native-babel-preset": "^0.54.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.5",
+    "@babel/runtime": "^7.4.5"
+  },
+  "peerDependencies": {
     "react-native-linear-gradient": "^2.5.4"
   }
 }
