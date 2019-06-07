@@ -1,23 +1,23 @@
 import React from 'react';
 import { Text, TextProps } from 'react-native';
-interface PropTypes extends TextProps {
+export interface TextMontserratProps extends TextProps {
   weight:
-    | 'normal'
-    | 'bold'
-    | '100'
-    | '200'
-    | '300'
-    | '400'
-    | '500'
-    | '600'
-    | '700'
-    | '800'
-    | '900';
+  | 'normal'
+  | 'bold'
+  | '100'
+  | '200'
+  | '300'
+  | '400'
+  | '500'
+  | '600'
+  | '700'
+  | '800'
+  | '900';
   children: any;
   style?: any;
 }
 
-const TextMontserrat = (props: PropTypes) => {
+const TextMontserrat = (props: TextMontserratProps) => {
   let { style, children, weight } = props;
   style = style || { fontWeight: 'normal' };
   let appliedWeight;

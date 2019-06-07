@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "React Native Components for ePaisa Apps",
   "main": "index.js",
+  "files": [
+    "src/",
+    "typings/"
+  ],
+  "typings": "typings/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "transpile": "babel src -d dist --copy-files"

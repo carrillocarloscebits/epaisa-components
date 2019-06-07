@@ -98,7 +98,7 @@ const images = {
 
 };
 
-interface PropTypes extends TouchableOpacityProps {
+export interface EpaisaCircleButtonProps extends TouchableOpacityProps {
   size?: number
   loading?: boolean
   disabled?: boolean
@@ -133,7 +133,7 @@ interface PropTypes extends TouchableOpacityProps {
   'CashPosPayments' |
   'CardPayments'
 }
-const EpaisaPaymentButton = (props: PropTypes) => {
+const EpaisaCircleButton = (props: EpaisaCircleButtonProps) => {
   const { disabled, loading, onPress, size, iconName, main, selected, ...others } = props;
   const name = `${iconName}${disabled || loading ? '_DISABLED' : ''}${!selected && !(disabled || loading) ? '_MAIN' : ''}`.toString()
   return (
@@ -159,4 +159,4 @@ const EpaisaPaymentButton = (props: PropTypes) => {
     </TouchableOpacity>
   )
 }
-export default EpaisaPaymentButton;
+export default EpaisaCircleButton;

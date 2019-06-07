@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import TextMontserrat from '../TextMontserrat/TextMontserrat';
-interface PropTypes extends TouchableOpacityProps {
+export interface EpaisaPaymentButtonProps extends TouchableOpacityProps {
   loading?: boolean;
   disabled?: boolean;
   onPress?: () => void;
@@ -15,7 +15,7 @@ interface PropTypes extends TouchableOpacityProps {
   textColor?: string;
 }
 
-const EpaisaPaymentButton = (props: PropTypes) => {
+const EpaisaPaymentButton = (props: EpaisaPaymentButtonProps) => {
   let {
     disabled,
     onPress,
