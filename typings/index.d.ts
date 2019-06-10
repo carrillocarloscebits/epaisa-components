@@ -10,8 +10,10 @@ import { TextMontserratProps } from "../src/TextMontserrat/TextMontserrat";
 import { EpaisaGradientButtonProps } from "../src/EpaisaGradientButton/EpaisaGradientButton";
 import { EpaisaCircleButtonProps } from "../src/EpaisaCircleButton/EpaisaCircleButton";
 import { EpaisaSimpleInputProps } from "../src/EpaisaSimpleInput/EpaisaSimpleInput";
+import { EpaisaOutlineButtonProps } from "../src/EpaisaOutlineButton/EpaisaOutlineButton";
 
 export declare const TextMontserrat: React.SFC<TextMontserratProps>
 export declare const EpaisaGradientButton: React.SFC<EpaisaGradientButtonProps>
 export declare const EpaisaCircleButton: React.SFC<EpaisaCircleButtonProps>
 export declare const EpaisaSimpleInput: React.SFC<EpaisaSimpleInputProps>
+export declare const EpaisaOutlineButton: React.SFC<EpaisaOutlineButtonProps>
