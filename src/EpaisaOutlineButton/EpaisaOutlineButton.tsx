@@ -6,7 +6,7 @@ export interface EpaisaOutlineButtonProps extends TouchableOpacityProps {
   loading?: boolean;
   disabled?: boolean;
   onPress?: () => void;
-  colors: string[];
+  colors?: string[];
   radius?: number;
   fontSize?: number;
   height?: number;
