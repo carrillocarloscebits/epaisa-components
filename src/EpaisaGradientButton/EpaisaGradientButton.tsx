@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import TextMontserrat from '../TextMontserrat/TextMontserrat';
-export interface EpaisaPaymentButtonProps extends TouchableOpacityProps {
+export interface EpaisaGradientButtonProps extends TouchableOpacityProps {
   loading?: boolean;
   disabled?: boolean;
   onPress?: () => void;
@@ -15,7 +15,7 @@ export interface EpaisaPaymentButtonProps extends TouchableOpacityProps {
   textColor?: string;
 }
 
-const EpaisaPaymentButton = (props: EpaisaPaymentButtonProps) => {
+const EpaisaGradientButton = (props: EpaisaGradientButtonProps) => {
   let {
     disabled,
     onPress,
@@ -73,4 +73,4 @@ const EpaisaPaymentButton = (props: EpaisaPaymentButtonProps) => {
 // Later on in your styles..
 
 // eslint-disable-next-line react/display-name
-export default React.memo(EpaisaPaymentButton);
+export default React.memo(EpaisaGradientButton);

@@ -103,8 +103,8 @@ export interface EpaisaCircleButtonProps extends TouchableOpacityProps {
   loading?: boolean
   disabled?: boolean
   onPress?(): void
-  main: boolean
-  selected: boolean
+  main?: boolean
+  selected?: boolean
   iconName:
   'MasterCard' |
   'Maestro' |
