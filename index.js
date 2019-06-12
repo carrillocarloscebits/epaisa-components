@@ -4,5 +4,6 @@ import EpaisaGradientButton from './src/EpaisaGradientButton/EpaisaGradientButto
 import EpaisaOutlineButton from './src/EpaisaOutlineButton/EpaisaOutlineButton';
 import EpaisaSimpleInput from './src/EpaisaSimpleInput/EpaisaSimpleInput';
 import EpaisaPhoneInput from './src/EpaisaPhoneInput/EpaisaPhoneInput';
+import EpaisaOtpInputs from './src/EpaisaOtpInputs/EpaisaOtpInputs';
 
-export { TextMontserrat, EpaisaCircleButton, EpaisaGradientButton, EpaisaSimpleInput, EpaisaOutlineButton, EpaisaPhoneInput };
+export { TextMontserrat, EpaisaCircleButton, EpaisaGradientButton, EpaisaSimpleInput, EpaisaOutlineButton, EpaisaPhoneInput, EpaisaOtpInputs };

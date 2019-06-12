@@ -12,10 +12,19 @@ import { EpaisaCircleButtonProps } from "../src/EpaisaCircleButton/EpaisaCircleB
 import { EpaisaSimpleInputProps } from "../src/EpaisaSimpleInput/EpaisaSimpleInput";
 import { EpaisaOutlineButtonProps } from "../src/EpaisaOutlineButton/EpaisaOutlineButton";
 import { EpaisaPhoneInputProps } from "../src/EpaisaPhoneInput/EpaisaPhoneInput";
-
+interface EpaisaOtpInputsProps {
+    cleanErrors: Function;
+    borderColors: string;
+    ref: Function;
+    invalid: boolean
+    data: string[];
+    onChangeText(otp: number): void;
+    onComplete(otp: number): void;
+}
 export declare const TextMontserrat: React.SFC<TextMontserratProps>
 export declare const EpaisaGradientButton: React.SFC<EpaisaGradientButtonProps>
 export declare const EpaisaCircleButton: React.SFC<EpaisaCircleButtonProps>
 export declare const EpaisaSimpleInput: React.SFC<EpaisaSimpleInputProps>
 export declare const EpaisaOutlineButton: React.SFC<EpaisaOutlineButtonProps>
 export declare const EpaisaPhoneInput: React.SFC<EpaisaPhoneInputProps>
+export declare const EpaisaOtpInputs: React.SFC<EpaisaOtpInputsProps>
