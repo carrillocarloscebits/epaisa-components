@@ -1,4 +1,4 @@
-import React, { Component } from './node_modules/react';
+import React, { Component } from 'react';
 import { View, TextInput, DeviceEventEmitter, Dimensions } from 'react-native';
 import {
   widthPercentageToDP as wp,
