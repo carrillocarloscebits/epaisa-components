@@ -21,6 +21,20 @@ interface EpaisaOtpInputsProps {
     onChangeText(otp: number): void;
     onComplete(otp: number): void;
 }
+
+interface EpaisaCalendarDateProps {
+    cheque: boolean;
+    current: string;
+    minDate: string | null;
+    maxDate: string | null;
+    markedDates: {
+        [key: string]: {
+            selected: boolean,
+            selectedColor: string,
+        },
+    }
+    onDayPress: Function;
+}
 export declare const TextMontserrat: React.SFC<TextMontserratProps>
 export declare const EpaisaGradientButton: React.SFC<EpaisaGradientButtonProps>
 export declare const EpaisaCircleButton: React.SFC<EpaisaCircleButtonProps>
@@ -28,3 +42,4 @@ export declare const EpaisaSimpleInput: React.SFC<EpaisaSimpleInputProps>
 export declare const EpaisaOutlineButton: React.SFC<EpaisaOutlineButtonProps>
 export declare const EpaisaPhoneInput: React.SFC<EpaisaPhoneInputProps>
 export declare const EpaisaOtpInputs: React.SFC<EpaisaOtpInputsProps>
+export declare const EpaisaCalendarDate: React.SFC<EpaisaCalendarDateProps>
