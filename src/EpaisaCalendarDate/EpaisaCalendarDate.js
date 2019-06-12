@@ -22,6 +22,41 @@ class EpaisaCalendarDate extends Component {
       handleOk,
       isTablet,
     } = this.props;
+    const styles = {
+      container: {
+        width: '100%',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      backgroundClose: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        height: '100%',
+        width: '100%',
+        backgroundColor: 'rgba(0,0,0,0.6)',
+      },
+      footer: {
+        backgroundColor: '#ffffff',
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+        width: '100%',
+        height: hp('10%'),
+      },
+      buttonsContainer: {
+        flexDirection: 'row',
+        marginBottom: isTablet ? hp('2%') : hp('3%'),
+        justifyContent: 'space-between',
+        width: '100%',
+        paddingHorizontal: isTablet ? wp('2%') : wp('5%'),
+      },
+      button: {
+        fontSize: isTablet ? hp('3.4%') : wp('4%'),
+        color: '#174285',
+        fontWeight: '600',
+      },
+    };
     return (
       <Modal
         visible={active}
@@ -69,41 +104,7 @@ class EpaisaCalendarDate extends Component {
 }
 
 // define your styles
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  backgroundClose: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    height: '100%',
-    width: '100%',
-    backgroundColor: 'rgba(0,0,0,0.6)',
-  },
-  footer: {
-    backgroundColor: '#ffffff',
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-    width: '100%',
-    height: hp('10%'),
-  },
-  buttonsContainer: {
-    flexDirection: 'row',
-    marginBottom: isTablet ? hp('2%') : hp('3%'),
-    justifyContent: 'space-between',
-    width: '100%',
-    paddingHorizontal: isTablet ? wp('2%') : wp('5%'),
-  },
-  button: {
-    fontSize: isTablet ? hp('3.4%') : wp('4%'),
-    color: '#174285',
-    fontWeight: '600',
-  },
-});
+
 
 //make this component available to the app
 export default EpaisaCalendarDate;
