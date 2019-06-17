@@ -12,6 +12,10 @@ import { EpaisaCircleButtonProps } from "../src/EpaisaCircleButton/EpaisaCircleB
 import { EpaisaSimpleInputProps } from "../src/EpaisaSimpleInput/EpaisaSimpleInput";
 import { EpaisaOutlineButtonProps } from "../src/EpaisaOutlineButton/EpaisaOutlineButton";
 import { EpaisaPhoneInputProps } from "../src/EpaisaPhoneInput/EpaisaPhoneInput";
+import { EpaisaModalDiscountProps } from "../src/EpaisaModalDiscount/EpaisaModalDiscount";
+import { EpaisaModalDeliveryProps } from "../src/EpaisaModalDelivery/EpaisaModalDelivery";
+import { EpaisaModalCardProps } from "../src/EpaisaModalCard/EpaisaModalCard";
+import { EpaisaDropdownInputProps } from "../src/EpaisaDropdownInput/EpaisaDropdownInput";
 interface EpaisaOtpInputsProps {
     cleanErrors: Function;
     borderColors: string;
@@ -43,3 +47,7 @@ export declare const EpaisaOutlineButton: React.SFC<EpaisaOutlineButtonProps>
 export declare const EpaisaPhoneInput: React.SFC<EpaisaPhoneInputProps>
 export declare const EpaisaOtpInputs: React.SFC<EpaisaOtpInputsProps>
 export declare const EpaisaCalendarDate: React.SFC<EpaisaCalendarDateProps>
+export declare const EpaisaModalDelivery: React.SFC<EpaisaModalDeliveryProps>
+export declare const EpaisaModalDiscount: React.SFC<EpaisaModalDiscountProps>
+export declare const EpaisaModalCard: React.SFC<EpaisaModalCardProps>
+export declare const EpaisaDropdownInput: React.SFC<EpaisaDropdownInputProps>
