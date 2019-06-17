@@ -7,4 +7,22 @@ import EpaisaPhoneInput from './src/EpaisaPhoneInput/EpaisaPhoneInput';
 import EpaisaOtpInputs from './src/EpaisaOtpInputs/EpaisaOtpInputs';
 import EpaisaCalendarDate from './src/EpaisaCalendarDate/EpaisaCalendarDate';
 
-export { TextMontserrat, EpaisaCircleButton, EpaisaGradientButton, EpaisaSimpleInput, EpaisaOutlineButton, EpaisaPhoneInput, EpaisaOtpInputs, EpaisaCalendarDate };
+import EpaisaDropdownInput from './src/EpaisaDropdownInput/EpaisaDropdownInput';
+import EpaisaModalCard from './src/EpaisaModalCard/EpaisaModalCard';
+import EpaisaModalDelivery from './src/EpaisaModalDelivery/EpaisaModalDelivery';
+import EpaisaModalDiscount from './src/EpaisaModalDiscount/EpaisaModalDiscount';
+
+export {
+    TextMontserrat,
+    EpaisaCircleButton,
+    EpaisaGradientButton,
+    EpaisaSimpleInput,
+    EpaisaOutlineButton,
+    EpaisaPhoneInput,
+    EpaisaOtpInputs,
+    EpaisaCalendarDate,
+    EpaisaDropdownInput,
+    EpaisaModalCard,
+    EpaisaModalDelivery,
+    EpaisaModalDiscount,
+};
