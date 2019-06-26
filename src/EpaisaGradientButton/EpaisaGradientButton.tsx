@@ -2,6 +2,7 @@ import React from 'react';
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import TextMontserrat from '../TextMontserrat/TextMontserrat';
+import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 export interface EpaisaGradientButtonProps extends TouchableOpacityProps {
   loading?: boolean;
   disabled?: boolean;
@@ -13,6 +14,7 @@ export interface EpaisaGradientButtonProps extends TouchableOpacityProps {
   title?: string;
   width?: string | number;
   textColor?: string;
+  textStyle?: any;
 }
 
 const EpaisaGradientButton = (props: EpaisaGradientButtonProps) => {
@@ -25,6 +27,7 @@ const EpaisaGradientButton = (props: EpaisaGradientButtonProps) => {
     fontSize,
     title,
     textColor,
+    textStyle,
     ...others
   } = props;
   height = height || 40;
@@ -36,6 +39,8 @@ const EpaisaGradientButton = (props: EpaisaGradientButtonProps) => {
       paddingRight: 15,
       borderRadius: radius || 0,
       elevation: 2,
+      alignItems: 'center',
+      justifyContent: "center"
     },
     buttonText: {
       fontSize: fontSize,
@@ -44,13 +49,15 @@ const EpaisaGradientButton = (props: EpaisaGradientButtonProps) => {
       color: textColor || '#ffffff',
       marginVertical: (height - fontSize) / 2,
       backgroundColor: 'transparent',
+      letterSpacing: wp('0.2%'),
+      ...textStyle
     },
   };
   return (
     <LinearGradient
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 0 }}
-      colors={disabled ? ['gray', 'gray'] : colors || ['#114B8C', '#0079AA']}
+      colors={disabled ? ['#BDC1CD', '#BDC1CD'] : colors || ['#114B8C', '#0079AA']}
       style={styles.linearGradient}
     >
       <TouchableOpacity
@@ -63,7 +70,7 @@ const EpaisaGradientButton = (props: EpaisaGradientButtonProps) => {
         activeOpacity={0.6}
         {...others}
       >
-        <TextMontserrat style={styles.buttonText} weight={'500'}>
+        <TextMontserrat style={styles.buttonText} weight={styles.buttonText.fontWeight || '500'}>
           {title}
         </TextMontserrat>
       </TouchableOpacity>

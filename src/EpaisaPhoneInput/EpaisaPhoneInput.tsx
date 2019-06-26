@@ -24,6 +24,7 @@ export interface EpaisaPhoneInputProps extends TextInputProps {
   defaultCountry: Country;
   disabled: boolean;
   isTablet: boolean;
+  alwaysFocus?: boolean;
 }
 
 let openModal = null;
@@ -59,6 +60,7 @@ const EpaisaPhoneInput = (props: EpaisaPhoneInputProps) => {
           fontSize: 20,
         }}
         textAlign="center"
+        alwaysFocus
         IconLeft={() => <View />}
         {...others}
       />
@@ -68,22 +70,24 @@ const EpaisaPhoneInput = (props: EpaisaPhoneInputProps) => {
           flex: 1,
           width: '100%',
           flexDirection: 'row',
-          justifyContent: 'space-around',
+          //here
+          alignItems: 'center',
+          justifyContent: 'flex-start',
         }}
         disabled={disabled}
         onPress={() => openModal()}
       >
         <Image
-          style={{ width: isTablet ? hp('7') : wp('7.4'), height: hp('4%') }}
+          style={{ width: isTablet ? hp('7') : wp('7.4'), height: hp('4%'), marginRight: wp('2%') }}
           source={flags[selectedCountry.alpha2Code]}
         />
         <View>
           <TextMontserrat
-            weight={'bold'}
+            weight={'500'}
             style={{
               fontSize: fontSize,
               color: others.textColor,
-              marginTop: hp('0.1%'),
+              paddingTop: 0
             }}
           >
             +{selectedCountry.callingCodes[0]}

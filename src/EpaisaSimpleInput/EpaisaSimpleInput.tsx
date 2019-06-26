@@ -19,6 +19,8 @@ export interface EpaisaSimpleInputProps extends TextInputProps {
   height?: number;
   textAlign?: string;
   hideUnderline?: boolean;
+  BorderLeft?: boolean;
+  alwaysFocus?: boolean;
 }
 
 const EpaisaSimpleInput = (props: EpaisaSimpleInputProps) => {
@@ -36,6 +38,8 @@ const EpaisaSimpleInput = (props: EpaisaSimpleInputProps) => {
     onIconClick,
     setValue,
     hideUnderline,
+    BorderLeft,
+    alwaysFocus,
     ...others
   } = props;
   const [focus, setFocus] = useState(false);
@@ -79,7 +83,7 @@ const EpaisaSimpleInput = (props: EpaisaSimpleInputProps) => {
   const labelStyle = {
     position: 'absolute',
     // fontFamily: 'Montserrat-SemiBold',
-    fontWeight: '400',
+    //fontWeight: '600',
     left: (style || {}).paddingLeft || 0,
     // paddingLeft: style,
     top: labelAnimation.interpolate({
@@ -90,7 +94,8 @@ const EpaisaSimpleInput = (props: EpaisaSimpleInputProps) => {
       inputRange: [0, 1],
       outputRange: [16, 12],
     }),
-    color: '#6b6b6b',
+    color: 'rgba(107,107,107,1)',
+    fontFamily: 'Montserrat-Medium',
   };
   const borderBottomWidth = hideUnderline ? 0 : 2;
   const height = props.height || 30;
@@ -109,13 +114,16 @@ const EpaisaSimpleInput = (props: EpaisaSimpleInputProps) => {
           style={[
             {
               color: textColor || '#333',
-              fontWeight: '400',
-              borderBottomColor: textColor,
+              //fontWeight: '600',
+              borderLeftWidth: BorderLeft ? borderBottomWidth : 0,
+              borderColor: focus || textValue != '' || alwaysFocus ? textColor : 'rgba(235,235,235,1)',
               borderBottomWidth,
               height,
               paddingLeft: 0,
-              paddingBottom: 2,
+              paddingBottom: 0,
               paddingTop: 0,
+              fontWeight: 'normal',
+              fontFamily: "Montserrat-Medium",
             },
             style,
           ]}
@@ -159,7 +167,7 @@ const EpaisaSimpleInput = (props: EpaisaSimpleInputProps) => {
             <IconLeft />
           </TouchableOpacity>
         )}
-        {focus && (
+        {(focus || textValue != '') && (
           <View
             style={{
               height: height - borderBottomWidth,
@@ -180,7 +188,7 @@ const EpaisaSimpleInput = (props: EpaisaSimpleInputProps) => {
               }}
             >
               {IconLeft ? (
-                <IconLeft />
+                <IconLeft color={focus ? '#174285' : null} />
               ) : (
                   <Image
                     source={require('./assets/icons/clear.png')}
