@@ -25,6 +25,7 @@ export interface EpaisaPhoneInputProps extends TextInputProps {
   disabled: boolean;
   isTablet: boolean;
   alwaysFocus?: boolean;
+  custom?: boolean;
 }
 
 let openModal = null;
@@ -37,6 +38,7 @@ const EpaisaPhoneInput = (props: EpaisaPhoneInputProps) => {
     defaultCountry,
     disabled,
     isTablet,
+    custom,
     ...others
   } = props;
   const [selectedCountry, setSelectedCountry] = useState<Country>(
@@ -72,13 +74,14 @@ const EpaisaPhoneInput = (props: EpaisaPhoneInputProps) => {
           flexDirection: 'row',
           //here
           alignItems: 'center',
-          justifyContent: 'flex-start',
+          justifyContent: isTablet ? custom ? 'space-around' : 'flex-start' : 'flex-start',
+          paddingHorizontal: isTablet ? custom ? wp('0%') : 0 : 0
         }}
         disabled={disabled}
         onPress={() => openModal()}
       >
         <Image
-          style={{ width: isTablet ? hp('7') : wp('7.4'), height: hp('4%'), marginRight: wp('2%') }}
+          style={{ width: isTablet ? hp('7') : wp('7.4'), height: hp('4%'), marginRight: isTablet ? custom ? 0 : wp('2%') : wp('2%') }}
           source={flags[selectedCountry.alpha2Code]}
         />
         <View>
